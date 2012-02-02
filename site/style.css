@@ -1,0 +1,108 @@
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+html, body {
+  height:100%;
+}
+body {
+  -webkit-text-size-adjust:none;
+  font-family:sans-serif;
+  padding: 0;
+margin: 0;
+  height:100%;
+
+}
+h1 {
+  font-size:36px;
+  margin:15px;
+  text-align:center;
+  color:#666;
+}
+h2 {
+  font-size:18px;
+  font-weight:bold;
+  color:black;
+  margin:20px 10px 10px;
+}
+small {
+  margin:0 10px 30px;
+  display:block;
+  font-size:12px;
+}
+a {
+  margin:0 0 0 10px;
+  font-size:12px;
+  color:#3c3c3c;
+}
+.swipe {
+  padding-bottom:20px;
+}
+
+.swipe ul {
+  height:100%;
+}
+.swipe li {
+  height:100%;
+}
+.swipe li div, .swipe div div div {
+  height:100%;
+  amargin:0 10px;
+  apadding:50px 10px;
+  
+  font-weight:bold;
+  color:#000;
+  
+  
+  
+}
+
+div.info {
+  position: absolute;
+  margin:40px;
+  text-align: left;
+  padding:10px;
+  background: #CCC;
+  opacity:0.6;
+  width:40%;
+}
+
+div.info.right {
+  right: -10px;  
+  
+}
+
+div.page1 {
+  background: url("images/full/001.png") no-repeat center center;
+  background-size:cover;
+  position:relative;
+
+}
+div.page2 {
+  background: url("images/full/002.jpg") no-repeat center center;
+  background-size:cover;
+  position:relative;
+}
+div.page3 {
+  background: url("images/full/003.jpg") no-repeat center center;
+  background-size:cover;
+  position:relative;
+}
+
+div.page4 {
+  background: url("images/full/004.jpg") no-repeat center center;
+  background-size:cover;
+  position:relative;
+}
+
+div.page5 {
+  background: url("images/full/005.jpg") no-repeat center center;
+  background-size:cover;
+  position:relative;
+}
