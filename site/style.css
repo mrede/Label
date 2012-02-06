@@ -58,9 +58,6 @@ a {
   
   font-weight:bold;
   color:#000;
-  
-  
-  
 }
 
 div.info {
@@ -78,30 +75,30 @@ div.info.right {
   
 }
 
-div.page1 {
+#page1 {
   background: url("images/full/001.png") no-repeat center center;
   background-size:cover;
   position:relative;
 
 }
-div.page2 {
+#page2 {
   background: url("images/full/002.jpg") no-repeat center center;
   background-size:cover;
   position:relative;
 }
-div.page3 {
+#page3 {
   background: url("images/full/003.jpg") no-repeat center center;
   background-size:cover;
   position:relative;
 }
 
-div.page4 {
+#page4 {
   background: url("images/full/004.jpg") no-repeat center center;
   background-size:cover;
   position:relative;
 }
 
-div.page5 {
+#page5 {
   background: url("images/full/005.jpg") no-repeat center center;
   background-size:cover;
   position:relative;
