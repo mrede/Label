@@ -1,79 +1,49 @@
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
-  margin:0;
-  padding:0;
-  border:0;
-  outline:0;
-  font-size:100%;
-  vertical-align:baseline;
-  background:transparent;
-}
-
 html, body {
   height:100%;
-}
-body {
-  -webkit-text-size-adjust:none;
-  font-family:sans-serif;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  word-wrap:break-word;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
   height:100%;
+  color: #fff;
+  line-height: 1.35em;
 }
-h1 {
-  font-size:36px;
-  margin:15px;
-  text-align:center;
-  color:#666;
-}
+
 h2 {
-  font-size:18px;
-  font-weight:bold;
-  color:black;
-  margin:20px 10px 10px;
-}
-small {
-  margin:0 10px 30px;
-  display:block;
-  font-size:12px;
-}
-a {
-  margin:0 0 0 10px;
-  font-size:12px;
-  color:#3c3c3c;
-}
-.swipe {
-  padding-bottom:20px;
+ font-size: 1.7em;
 }
 
 .swipe ul {
   height:100%;
+  margin: 0;
+  padding: 0;
 }
 .swipe li {
   height:100%;
 }
-.swipe li div, .swipe div div div {
-  height:100%;
-  amargin:0 10px;
-  apadding:50px 10px;
-  
-  font-weight:bold;
-  color:#000;
+
+#overlay {
+	display:block;
+	position:absolute;
+	z-index: 1;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background: url('images/dg_pattern_20.png');
 }
 
-div.info {
-  position: absolute;
-  margin:40px;
-  text-align: left;
-  padding:10px;
-  background: #CCC;
-  opacity:0.6;
-  width:40%;
-}
+#home {
+  background: url("images/full/021.png") no-repeat center center;
+  background-size:cover;
+  position:relative;
 
-div.info.right {
-  right: -10px;  
-  
 }
-
 #page1 {
   background: url("images/full/001.png") no-repeat center center;
   background-size:cover;
@@ -101,4 +71,38 @@ div.info.right {
   background: url("images/full/005.jpg") no-repeat center center;
   background-size:cover;
   position:relative;
+}
+
+.buttons, .description {
+	position: absolute;
+	z-index: 999;
+	padding-left: 20px;
+}
+
+.buttons {
+	bottom: 20px;
+	padding-left: 33px;
+}
+
+.buttons a {
+	display: block;
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
+.next span, .prev span, .home span, .email span {
+	text-indent: -1000em;
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	top: -32px;
+}
+
+.description {
+	top: 0;
+	padding: 13px 24px 13px 17px;
+	width: 280px;
+	background: rgba(0, 0, 0, 0.5);
+	margin: 0 33px;
 }

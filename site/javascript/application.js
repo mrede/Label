@@ -1,4 +1,8 @@
-var slider = new Swipe(document.getElementById('slider'));
+var slider = new Swipe(document.getElementById('slider'), {
+	callback: function(event, index, elem) {
+		window.location.hash = elem.getAttribute('data-src');
+	}
+});
 
 //pathjs
 function notFound(){
