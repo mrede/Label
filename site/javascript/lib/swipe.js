@@ -8,6 +8,7 @@
 
 window.Swipe = function(element, options) {
 
+
   // return immediately if element doesn't exist
   if (!element) return null;
 
@@ -30,6 +31,9 @@ window.Swipe = function(element, options) {
 
   // trigger slider initialization
   this.setup();
+
+  this.ie = null;
+  this.ie_version();
 
   // begin auto slideshow
   this.begin();
@@ -83,8 +87,23 @@ Swipe.prototype = {
     this.slide(this.index, 0); 
 
     // show slider element
-    this.container.style.visibility = 'visible';
+    this.container.style.visibility = 'visible'; 
 
+  },
+
+  ie_version: function() {
+    var rv = -1; // Return value assumes failure.
+    if (navigator.appName == 'Microsoft Internet Explorer')
+    {
+      var ua = navigator.userAgent;
+      var re  = new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
+      if (re.exec(ua) != null) {
+        rv = parseFloat( RegExp.$1 );
+        if(rv<=8) {
+          this.ie = true;
+        }
+      }
+    }
   },
 
   slide: function(index, duration) {
@@ -98,8 +117,25 @@ Swipe.prototype = {
     style.webkitTransform = 'translate3d(' + -(index * this.width) + 'px,0,0)';
     style.msTransform = style.MozTransform = style.OTransform = 'translateX(' + -(index * this.width) + 'px)';
 
+    if(this.ie==true) {
+      if(index!=0) {
+        if(this.slides[0].style.display != 'none') {
+          this.slides[0].style.display = 'none';
+        }
+        this.slides[index-1].style.display = 'none';
+        this.slides[index].style.display = 'block';
+      } else {
+        this.slides[index].style.display = 'block';
+      }
+
+    }
+
     // set new index to allow for expression arguments
     this.index = index;
+
+    if(this.ie==true) {
+      this.callback(null, this.index, this.slides[this.index]);
+    }
 
   },
 
@@ -117,17 +153,16 @@ Swipe.prototype = {
     clearTimeout(this.interval);
 
     // if not at first slide
-    if (this.index) this.slide(this.index-1, this.speed);
+    if (this.index) this.slide(parseInt(this.index)-1, this.speed);
 
   },
 
   next: function(delay) {
-
     // cancel next scheduled automatic transition, if any
     this.delay = delay || 0;
     clearTimeout(this.interval);
 
-    if (this.index < this.length - 1) this.slide(this.index+1, this.speed); // if not last slide
+    if (this.index < this.length - 1) this.slide(parseInt(this.index)+1, this.speed); // if not last slide
     else this.slide(0, this.speed); //if last slide return to start
 
   },
@@ -170,7 +205,7 @@ Swipe.prototype = {
   transitionEnd: function(e) {
     
     if (this.delay) this.begin();
-
+ 
     this.callback(e, this.index, this.slides[this.index]);
 
   },
@@ -254,7 +289,7 @@ Swipe.prototype = {
     if (!this.isScrolling) {
 
       // call slide function with slide end value based on isValidSlide and isPastBounds tests
-      this.slide( this.index + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
+      this.slide( parseInt(this.index) + ( isValidSlide && !isPastBounds ? (this.deltaX < 0 ? 1 : -1) : 0 ), this.speed );
 
     }
 

@@ -1,23 +1,20 @@
-var slider = new Swipe(document.getElementById('slider'), {
+var slider = new Swipe(document.getElementById('slider'), { 
 	callback: function(event, index, elem) {
+		alert("hash currently is: " + window.location.hash)
+		alert("hash should be: " + elem.getAttribute('data-src'));
 		window.location.hash = elem.getAttribute('data-src');
 	}
 });
 
-//pathjs
 function notFound(){
- 	document.getElementById("#content").innerHTML = "404 Not Found";
+ 	document.getElementById("error").innerHTML = "404 Not Found";
 }
 
 Path.map("#/projects/:pos/:project_id").to(function(){
-	///
-	if(slider.getPos()!=this.params["pos"]) {
-		slider.slide(this.params["pos"]);
-	}
+	slider.slide(this.params["pos"]);
 });
 
 Path.map("#/howdy").to(function(){
-	///
 	if(slider.getPos()!=0) {slider.slide(0);}
 });
 
@@ -25,23 +22,15 @@ Path.root("#/howdy");
 
 Path.rescue(notFound);
 
-addEvent(window,'load',function(){
-	
-	Path.listen();
 
-	next = getElementsByClassName("next", "a", document.getElementById("slider"));
-	prev = getElementsByClassName("prev", "a", document.getElementById("slider"));
+Path.listen();
 
-	for (var i=0, il=next.length; i<il; i++) {
-		next[i].onclick = function() {
-			slider.next();
-		}
-	}
+var next = document.getElementById("next");
+next.onclick = function() {
+	slider.next();
+};
 
-	for (var i=0, il=prev.length; i<il; i++) {
-		prev[i].onclick = function() {
-			slider.prev();
-		}
-	}
-	
-});
+var prev = document.getElementById("prev");
+prev.onclick = function() {
+	slider.prev();
+};

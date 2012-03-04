@@ -4,117 +4,97 @@
 <meta name='viewport' content='width=device-width, minimum-scale=1.0, maximum-scale=1.0'> 
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<link href='style.css' rel='stylesheet'/>
-<link media="only screen and (max-device-width: 480px)" href="mobile.css" type="text/css" rel="stylesheet" />
+<link href='/stylesheets/style.css' rel='stylesheet'/>
+<!--[if lt IE 9]><link href="/stylesheets/ie.css" media="all" rel="stylesheet"><![endif]--> 
+<link media="only screen and (max-device-width: 480px)" href="/stylesheets/mobile.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <div id="content">
-	<div id='slider' class='swipe' style='width:100%; height:100%;'>
+<div id="error"></div>
+<!-- search navigation just here for google etc -->
+<ul id="search-navigation">
+	<li><a href="#/howdy">Home</a></li>
+	<li><a href="#/projects/1/project1">Project 1</a></li>
+	<li><a href="#/projects/2/project2">Project 2</a></li>
+	<li><a href="#/projects/3/project3">Project 3</a></li>
+	<li><a href="#/projects/4/project4">Project 4</a></li>
+	<li><a href="#/projects/5/project5">Project 5</a></li>
+</ul>	
+
+	<div id="slider" class="swipe">
 	  <ul>
-		<li style='display:block' id="home" data-src="#/howdy">
+		<li id="home" style="display: block" data-src="#/howdy">
 			<div id="overlay"></div>
 			<div class="description">
 				<h2>Howdy</h2>
 				<p>VHS sriracha mustache, delectus sapiente officia occaecat photo booth. Fap put a bird on it artisan, vero iphone biodiesel mixtape narwhal wolf dolor. Anim aliqua mlkshk craft beer mollit pitchfork, keytar locavore enim gluten-free cosby sweater. Fugiat fixie chambray next level, non chillwave selvage occaecat odd future cillum. Food truck eu aliquip VHS adipisicing cupidatat, esse laborum. Mumblecore ex hoodie cliche. Letterpress fanny pack before they sold out, brunch chambray street art shoreditch.</p>
 			</div>
-			<div class="buttons">
-				
-				<a href='mailto:howdy@thisislabel.co.uk?subject=Hi there label&amp;body=Hi,' class="email"><span>email us</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,5.333c-7.732,0-14,4.701-14,10.5c0,1.982,0.741,3.833,2.016,5.414L2,25.667l5.613-1.441c2.339,1.317,5.237,2.107,8.387,2.107c7.732,0,14-4.701,14-10.5C30,10.034,23.732,5.333,16,5.333z"/></svg></a>
-				
-				<a href='#/projects/1/project1' class="next"><span>next</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,1.466C7.973,1.466,1.466,7.973,1.466,16c0,8.027,6.507,14.534,14.534,14.534c8.027,0,14.534-6.507,14.534-14.534C30.534,7.973,24.027,1.466,16,1.466zM13.665,25.725l-3.536-3.539l6.187-6.187l-6.187-6.187l3.536-3.536l9.724,9.723L13.665,25.725z"/></svg></a>
-				
-			</div>
 	    </li>
-	    <li style='display:none' id="page1" data-src="#/projects/1/project1">
+	    <li id="page1" style="display: none" data-src="#/projects/1/project1">
 			<div id="overlay"></div>
 			<div class="description">
-				<h2>Tin Bath</h2>
+				<h2>Project 1</h2>
 				<p>Chambray sriracha cardigan, mumblecore thundercats fap viral nostrud minim eu next level wolf qui dolor. Etsy sustainable authentic dreamcatcher salvia ullamco, cray pour-over ethical PBR et magna blog +1. Godard PBR shoreditch, excepteur fanny pack helvetica post-ironic readymade. Polaroid dreamcatcher adipisicing farm-to-table, deserunt chillwave authentic narwhal four loko nulla ea. Dolor nulla banksy artisan, seitan pickled farm-to-table ut laboris locavore selvage eu exercitation hella high life. Mustache sint chambray synth. Sint sartorial viral iphone dolore, mustache aesthetic selvage post-ironic aute photo booth.</p>
 			</div>
-			<div class="buttons">
-				
-				<a href='mailto:howdy@thisislabel.co.uk?subject=Hi there label&amp;body=Hi,' class="email"><span>email us</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,5.333c-7.732,0-14,4.701-14,10.5c0,1.982,0.741,3.833,2.016,5.414L2,25.667l5.613-1.441c2.339,1.317,5.237,2.107,8.387,2.107c7.732,0,14-4.701,14-10.5C30,10.034,23.732,5.333,16,5.333z"/></svg></a>
-				
-				<a href='/#/howdy' class="home"><span>home</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M27.812,16l-3.062-3.062V5.625h-2.625v4.688L16,4.188L4.188,16L7,15.933v11.942h17.875V16H27.812zM16,26.167h-5.833v-7H16V26.167zM21.667,23.167h-3.833v-4.042h3.833V23.167z"/></svg></a>
-				
-				<a href='#/howdy' class="prev"><span>prev</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,30.534c8.027,0,14.534-6.507,14.534-14.534c0-8.027-6.507-14.534-14.534-14.534C7.973,1.466,1.466,7.973,1.466,16C1.466,24.027,7.973,30.534,16,30.534zM18.335,6.276l3.536,3.538l-6.187,6.187l6.187,6.187l-3.536,3.537l-9.723-9.724L18.335,6.276z"/></svg></a> 
-				
-				<a href='#/projects/2/project2' class="next"><span>next</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,1.466C7.973,1.466,1.466,7.973,1.466,16c0,8.027,6.507,14.534,14.534,14.534c8.027,0,14.534-6.507,14.534-14.534C30.534,7.973,24.027,1.466,16,1.466zM13.665,25.725l-3.536-3.539l6.187-6.187l-6.187-6.187l3.536-3.536l9.724,9.723L13.665,25.725z"/></svg></a>
-				
-			</div>
 	    </li>
-	    <li style='display:none' id="page2" data-src="#/projects/2/project2">
+	    <li id="page2" style="display: none" data-src="#/projects/2/project2">
 			<div id="overlay"></div>
 			<div class="description">
-				<h2>Time Squid</h2>
+				<h2>Project 2</h2>
 				<p>Labore semiotics tumblr, mcsweeney's fixie reprehenderit sartorial freegan put a bird on it 8-bit exercitation ad viral. Cliche twee pariatur, jean shorts flexitarian locavore kogi cupidatat delectus dolore lo-fi Austin echo park irony. Carles nisi vegan adipisicing aute readymade. Ea mumblecore street art butcher nihil. Forage deserunt nostrud twee. Fugiat reprehenderit etsy aute bushwick. Dolore four loko commodo raw denim, salvia irony selvage hoodie culpa aesthetic williamsburg.</p>
 			</div>
-			<div class="buttons">
-				<a href='mailto:howdy@thisislabel.co.uk?subject=Hi there label&amp;body=Hi,' class="email"><span>email us</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,5.333c-7.732,0-14,4.701-14,10.5c0,1.982,0.741,3.833,2.016,5.414L2,25.667l5.613-1.441c2.339,1.317,5.237,2.107,8.387,2.107c7.732,0,14-4.701,14-10.5C30,10.034,23.732,5.333,16,5.333z"/></svg></a>
-				
-				<a href='#/howdy' class="home"><span>home</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M27.812,16l-3.062-3.062V5.625h-2.625v4.688L16,4.188L4.188,16L7,15.933v11.942h17.875V16H27.812zM16,26.167h-5.833v-7H16V26.167zM21.667,23.167h-3.833v-4.042h3.833V23.167z"/></svg></a>
-				
-				<a href='#/projects/1/project1' class="prev"><span>prev</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,30.534c8.027,0,14.534-6.507,14.534-14.534c0-8.027-6.507-14.534-14.534-14.534C7.973,1.466,1.466,7.973,1.466,16C1.466,24.027,7.973,30.534,16,30.534zM18.335,6.276l3.536,3.538l-6.187,6.187l6.187,6.187l-3.536,3.537l-9.723-9.724L18.335,6.276z"/></svg></a> 
-				
-				<a href='#/projects/3/project3' class="next"><span>next</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,1.466C7.973,1.466,1.466,7.973,1.466,16c0,8.027,6.507,14.534,14.534,14.534c8.027,0,14.534-6.507,14.534-14.534C30.534,7.973,24.027,1.466,16,1.466zM13.665,25.725l-3.536-3.539l6.187-6.187l-6.187-6.187l3.536-3.536l9.724,9.723L13.665,25.725z"/></svg></a>
-			</div>
 	    </li>
-	    <li style='display:none' id="page3" data-src="#/projects/3/project3">
+	    <li id="page3" style="display: none" data-src="#/projects/3/project3">
 			<div id="overlay"></div>
 			<div class="description">
-				<h2>Stick House</h2>
+				<h2>Project 3</h2>
 				<p>Reprehenderit lomo VHS post-ironic swag. Keytar cred vero, etsy incididunt truffaut wayfarers beard twee typewriter. Iphone brooklyn esse wes anderson whatever hoodie. Four loko pour-over locavore, ullamco fap occaecat PBR post-ironic. Flexitarian semiotics tempor four loko, nesciunt readymade velit terry richardson kale chips. Craft beer hoodie cray brooklyn quinoa. Consectetur artisan synth enim placeat mcsweeney's, sapiente cray you probably haven't heard of them in tempor vinyl lo-fi.</p>
 			</div>
-			<div class="buttons">
-				<a href='mailto:howdy@thisislabel.co.uk?subject=Hi there label&amp;body=Hi,' class="email"><span>email us</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,5.333c-7.732,0-14,4.701-14,10.5c0,1.982,0.741,3.833,2.016,5.414L2,25.667l5.613-1.441c2.339,1.317,5.237,2.107,8.387,2.107c7.732,0,14-4.701,14-10.5C30,10.034,23.732,5.333,16,5.333z"/></svg></a>
-				
-				<a href='#/howdy' class="home"><span>home</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M27.812,16l-3.062-3.062V5.625h-2.625v4.688L16,4.188L4.188,16L7,15.933v11.942h17.875V16H27.812zM16,26.167h-5.833v-7H16V26.167zM21.667,23.167h-3.833v-4.042h3.833V23.167z"/></svg></a>
-				
-				<a href='#/projects/2/project2' class="prev"><span>prev</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,30.534c8.027,0,14.534-6.507,14.534-14.534c0-8.027-6.507-14.534-14.534-14.534C7.973,1.466,1.466,7.973,1.466,16C1.466,24.027,7.973,30.534,16,30.534zM18.335,6.276l3.536,3.538l-6.187,6.187l6.187,6.187l-3.536,3.537l-9.723-9.724L18.335,6.276z"/></svg></a> 
-				
-				<a href='#/projects/4/project4' class="next"><span>next</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,1.466C7.973,1.466,1.466,7.973,1.466,16c0,8.027,6.507,14.534,14.534,14.534c8.027,0,14.534-6.507,14.534-14.534C30.534,7.973,24.027,1.466,16,1.466zM13.665,25.725l-3.536-3.539l6.187-6.187l-6.187-6.187l3.536-3.536l9.724,9.723L13.665,25.725z"/></svg></a>
-			<div class="buttons">
 	    </li>
-	    <li style='display:none' id="page4" data-src="#/projects/4/project4">
+	    <li id="page4" style="display: none" data-src="#/projects/4/project4">
 			<div id="overlay"></div>
 			<div class="description">
-				<h2>Random Thang</h2>
+				<h2>Project 4</h2>
 				<p>You probably haven't heard of them direct trade food truck, bicycle rights photo booth gentrify skateboard marfa mixtape. Portland lo-fi helvetica aesthetic, mumblecore echo park quinoa twee before they sold out cosby sweater. Gastropub chillwave echo park trust fund, typewriter small batch wes anderson kogi messenger bag. Fingerstache brooklyn whatever marfa high life, shoreditch post-ironic. Mustache typewriter letterpress truffaut biodiesel mumblecore. Mixtape gastropub seitan ennui you probably haven't heard of them lo-fi vinyl occupy mlkshk, raw denim keytar locavore. Pop-up thundercats high life chambray mcsweeney's.</p>
 			</div>
-			<div class="buttons">
-				<a href='mailto:howdy@thisislabel.co.uk?subject=Hi there label&amp;body=Hi,' class="email"><span>email us</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,5.333c-7.732,0-14,4.701-14,10.5c0,1.982,0.741,3.833,2.016,5.414L2,25.667l5.613-1.441c2.339,1.317,5.237,2.107,8.387,2.107c7.732,0,14-4.701,14-10.5C30,10.034,23.732,5.333,16,5.333z"/></svg></a>
-				
-				<a href='#/howdy' class="home"><span>home</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M27.812,16l-3.062-3.062V5.625h-2.625v4.688L16,4.188L4.188,16L7,15.933v11.942h17.875V16H27.812zM16,26.167h-5.833v-7H16V26.167zM21.667,23.167h-3.833v-4.042h3.833V23.167z"/></svg></a>
-				
-				<a href='#/projects/3/project3' class="prev"><span>prev</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,30.534c8.027,0,14.534-6.507,14.534-14.534c0-8.027-6.507-14.534-14.534-14.534C7.973,1.466,1.466,7.973,1.466,16C1.466,24.027,7.973,30.534,16,30.534zM18.335,6.276l3.536,3.538l-6.187,6.187l6.187,6.187l-3.536,3.537l-9.723-9.724L18.335,6.276z"/></svg></a> 
-				
-				<a href='#/projects/5/project5' class="next"><span>next</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,1.466C7.973,1.466,1.466,7.973,1.466,16c0,8.027,6.507,14.534,14.534,14.534c8.027,0,14.534-6.507,14.534-14.534C30.534,7.973,24.027,1.466,16,1.466zM13.665,25.725l-3.536-3.539l6.187-6.187l-6.187-6.187l3.536-3.536l9.724,9.723L13.665,25.725z"/></svg></a>
-			</div>
 	    </li>
-	    <li style='display:none' id="page5" data-src="#/projects/5/project5">
+	    <li id="page5" style="display: none" data-src="#/projects/5/project5">
 			<div id="overlay"></div>
 			<div class="description">
 				<h2>Something Interesting</h2>
 				<p>Art party gentrify forage food truck helvetica godard umami, biodiesel tofu. Semiotics shoreditch scenester pour-over pop-up. Typewriter four loko single-origin coffee irony, quinoa biodiesel keffiyeh fingerstache occupy cred twee wolf stumptown post-ironic. Odd future chillwave kale chips, beard food truck next level mustache kogi fanny pack freegan artisan american apparel pop-up bespoke. Wolf cliche squid fap. Ethnic bushwick pop-up cosby sweater. Retro raw denim mlkshk stumptown seitan.</p>
 			</div>
-			<div class="buttons">
-				<a href='mailto:howdy@thisislabel.co.uk?subject=Hi there label&amp;body=Hi,' class="email"><span>email us</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,5.333c-7.732,0-14,4.701-14,10.5c0,1.982,0.741,3.833,2.016,5.414L2,25.667l5.613-1.441c2.339,1.317,5.237,2.107,8.387,2.107c7.732,0,14-4.701,14-10.5C30,10.034,23.732,5.333,16,5.333z"/></svg></a>
-				
-				<a href='#/howdy' class="home"><span>home</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M27.812,16l-3.062-3.062V5.625h-2.625v4.688L16,4.188L4.188,16L7,15.933v11.942h17.875V16H27.812zM16,26.167h-5.833v-7H16V26.167zM21.667,23.167h-3.833v-4.042h3.833V23.167z"/></svg></a>
-				
-				<a href='#/projects/4/project4' class="prev"><span>prev</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,30.534c8.027,0,14.534-6.507,14.534-14.534c0-8.027-6.507-14.534-14.534-14.534C7.973,1.466,1.466,7.973,1.466,16C1.466,24.027,7.973,30.534,16,30.534zM18.335,6.276l3.536,3.538l-6.187,6.187l6.187,6.187l-3.536,3.537l-9.723-9.724L18.335,6.276z"/></svg></a> 
-				
-				<a href='#/howdy' class="next"><span>next</span><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 0 0" enable-background="new 0 0 0 0" xml:space="preserve"><path fill="#FFFFFF" d="M16,1.466C7.973,1.466,1.466,7.973,1.466,16c0,8.027,6.507,14.534,14.534,14.534c8.027,0,14.534-6.507,14.534-14.534C30.534,7.973,24.027,1.466,16,1.466zM13.665,25.725l-3.536-3.539l6.187-6.187l-6.187-6.187l3.536-3.536l9.724,9.723L13.665,25.725z"/></svg></a>
-			</div>
 	    </li>
 	  </ul>
 	</div>
 	
-</div>	
-<script type="text/javascript" src='javascript/lib/swipe.min.js'></script>
-<script type="text/javascript" src='javascript/lib/ready.min.js'></script>
-<script type="text/javascript" src='javascript/lib/byclassname.min.js'></script>
+	<div id="buttons">
+		<a href='mailto:howdy@thisislabel.co.uk?subject=Hi There&amp;body=Hi,\n'>
+			<span>email</span>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="0 0 32 32" xml:space="preserve"><path fill="#FFFFFF" d="M16,5.333c-7.732,0-14,4.701-14,10.5c0,1.982,0.741,3.833,2.016,5.414L2,25.667l5.613-1.441c2.339,1.317,5.237,2.107,8.387,2.107c7.732,0,14-4.701,14-10.5C30,10.034,23.732,5.333,16,5.333z"/></svg>
+		</a>
+	
+		<a href='#/howdy'>
+			<span>home</span>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="0 0 32 32" xml:space="preserve"><path fill="#FFFFFF" d="M27.812,16l-3.062-3.062V5.625h-2.625v4.688L16,4.188L4.188,16L7,15.933v11.942h17.875V16H27.812zM16,26.167h-5.833v-7H16V26.167zM21.667,23.167h-3.833v-4.042h3.833V23.167z"/></svg>
+		</a>
+
+		<div id="next" style="color: #000;">
+			<span>next</span>
+			<!-- svg icon -->
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="0 0 32 32" xml:space="preserve"><path fill="#FFFFFF" d="M16,1.466C7.973,1.466,1.466,7.973,1.466,16c0,8.027,6.507,14.534,14.534,14.534c8.027,0,14.534-6.507,14.534-14.534C30.534,7.973,24.027,1.466,16,1.466zM13.665,25.725l-3.536-3.539l6.187-6.187l-6.187-6.187l3.536-3.536l9.724,9.723L13.665,25.725z"/></svg>
+		</div>
+		
+		<div id="prev" style="color: #000;">
+			<span>prev</span>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="0 0 32 32" xml:space="preserve"><path fill="#FFFFFF" d="M16,30.534c8.027,0,14.534-6.507,14.534-14.534c0-8.027-6.507-14.534-14.534-14.534C7.973,1.466,1.466,7.973,1.466,16C1.466,24.027,7.973,30.534,16,30.534zM18.335,6.276l3.536,3.538l-6.187,6.187l6.187,6.187l-3.536,3.537l-9.723-9.724L18.335,6.276z"/></svg>
+		</div>
+	</div>
+	
+	
+</div>
 <script type="text/javascript" src='javascript/lib/path.min.js'></script>
+<script type="text/javascript" src='javascript/lib/swipe.js'></script>
 <script type="text/javascript" src='javascript/application.js'></script>
 </body> 
 </html> 
