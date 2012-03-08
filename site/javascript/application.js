@@ -1,7 +1,5 @@
 var slider = new Swipe(document.getElementById('slider'), { 
 	callback: function(event, index, elem) {
-		alert("hash currently is: " + window.location.hash)
-		alert("hash should be: " + elem.getAttribute('data-src'));
 		window.location.hash = elem.getAttribute('data-src');
 	}
 });
