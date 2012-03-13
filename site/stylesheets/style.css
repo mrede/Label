@@ -24,7 +24,7 @@ h2 {
  padding: 0;
 }
 
-#overlay {
+.overlay {
 	display:block;
 	position:absolute;
 	z-index: 1;
