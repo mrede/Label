@@ -49,20 +49,25 @@ h2 {
 
 #page1 {
   background: url("../images/full/001.png") no-repeat center center;
+  background-size:cover;
 }
 #page2 {
   background: url("../images/full/002.jpg") no-repeat center center;
+  background-size:cover;
 }
 #page3 {
   background: url("../images/full/003.jpg") no-repeat center center;
+  background-size:cover;
 }
 
 #page4 {
   background: url("../images/full/004.jpg") no-repeat center center;
+  background-size:cover;
 }
 
 #page5 {
   background: url("../images/full/005.jpg") no-repeat center center;
+  background-size:cover;
 }
 
 #buttons, .description {
